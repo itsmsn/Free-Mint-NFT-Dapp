@@ -1,0 +1,4 @@
+.tableWrapper::-webkit-scrollbar,
+.noScroll::-webkit-scrollbar {
+  display: none;
+}

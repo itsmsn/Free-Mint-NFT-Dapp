@@ -1,0 +1,53 @@
+@import "./Colors.scss";
+@import "./Props.scss";
+@import "./media.scss";
+@import "../components/Header/header.scss";
+@import "../Pages/Home/home.scss";
+
+
+.font,
+body {
+  font-family: "Asap", sans-serif;
+}
+
+@font-face {
+  font-family: "ocr-a-bt-regular";
+  src: url("../font/OCR-A\ BT.ttf");
+  font-style: Regular;
+
+}
+
+.font-b {
+  font-family: "ocr-a-bt-regular", sans-serif;
+}
+
+
+.wrapWidth {
+  width: 1350px;
+  margin: 0 auto;
+  @include media("<=xlarge") {
+    width: 1280px;
+    margin: 0 auto;
+  }
+  @include media("<=large") {
+    width: 100%;
+    padding: 0px 3%;
+  }
+  @include media("<=desktop") {
+    width: 100%;
+    padding: 0px 3%;
+  }
+  @include media("<=tablet") {
+    width: 100%;
+    padding: 0px 3%;
+  }
+  @include media(">=phone", "<=480px") {
+    padding: 0px 5%;
+  }
+}
+
+.App {
+  min-height: 100vh;
+  background: #ffffff;
+}
+

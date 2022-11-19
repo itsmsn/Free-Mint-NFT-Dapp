@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  
+}
+
+*, html, body{
+  overflow-x: hidden;
+}
+.minu-bg,.plus-bg{
+  background: black;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.input-bg{
+  background: rgb(255, 255, 255)!important;
+  padding: 7px;
+}
+
+
+.m-value{
+  margin-left: 6rem;
+}
+
+.mint-btn{
+  margin-top: 3rem;
+}
+
+.m-t{
+  margin-top: -17.1rem!important;
+  margin-left: 9rem!important;
+}
+
+.yellow p{
+  color: rgb(255 220 4) ;
+}
+.ca{
+  color: rgb(241, 91, 181);
+}
+
+.bg-b{
+  background-image: url("https://boredape-minting-dapp.vercel.app/images/blur.jpeg");
+}
+
+@media (max-width : 600px){
+  .db{
+    display: block!important;
+  }
+
+  .pmb{
+    margin-top: 2rem!important;
+    width: 101%!important;
+  }
+}
+
+.dapp{
+  color: white;
+}

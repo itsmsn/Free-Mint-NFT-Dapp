@@ -1,0 +1,117 @@
+@mixin dropDownAnim($duration: 0.3s) {
+  animation-name: drop;
+  animation-duration: $duration;
+  transform-origin: top;
+}
+
+// Header
+.header-camp {
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 70px;
+  padding: 10px 0px;
+  position: sticky;
+  background: rgb(16, 23, 36);
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 23%);
+  @include media("<=tablet") {
+    padding: 20px 0px;
+  }
+  .wrap {
+    .left {
+      flex: 0.6;
+      @include media("<=phoneH") {
+      }
+      .logo-img {
+        height: 72px;
+        @include media("<=phoneH") {
+          height: 42px;
+          width: 100%;
+        }
+      }
+    }
+    .right {
+      flex: 1;
+      @include media("<=phoneH") {
+        width: 100%;
+      }
+      .input-box {
+        border-radius: 6px;
+        background: #eee;
+        overflow: hidden;
+        width: 160px;
+        .minus-icon,
+        .plus-icon {
+          padding: 12px;
+          background: $themeColor;
+          svg {
+            path {
+              fill: #ffffff;
+            }
+          }
+        }
+        .txt {
+          width: 100%;
+          font-size: 18px;
+          padding: 0 12px;
+        }
+      }
+      .right-meta {
+        .menu-list {
+          @include media("<=phoneH") {
+            // display: none;
+          }
+
+          .menu-item {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 400;
+            color: #ffffff;
+            font-family: "ocr-a-bt-regular", sans-serif;
+            margin-left: 30px;
+            border-radius: 6px;
+            @include media("<=phoneH") {
+              font-size: 16px;
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+      .menu-icon {
+        display: none;
+        background: #000;
+        padding: 6px;
+        border-radius: 6px;
+        @include media("<=phoneH") {
+          display: flex;
+        }
+      }
+      .manue-profile {
+        width: 100%;
+        position: absolute;
+        top: 85px;
+        right: 0px;
+        padding: 10px 0;
+        background: #e1e1e1;
+        box-shadow: 0px 0px 52px -30px rgba(0, 0, 0, 0.25);
+        // border-radius: 8px;
+        &.show {
+          @include dropDownAnim;
+        }
+        .input-box {
+          width: 90%;
+        }
+        .btn {
+          border-radius: 6px;
+          margin-top: 12px;
+          width: 90%;
+        }
+        .menu-list {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

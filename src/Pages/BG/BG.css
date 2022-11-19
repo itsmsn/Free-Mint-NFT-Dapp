@@ -1,0 +1,10 @@
+.bg-full-page{
+    height: 100vh;
+    background: url(https://boredape-minting-dapp.vercel.app/images/blur.jpeg);
+}
+
+.bg-full-page h1{
+    text-align: center;
+    color: white;
+    padding-top: 4rem;
+}
